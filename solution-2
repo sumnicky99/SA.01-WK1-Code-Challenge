@@ -1,11 +1,11 @@
 // read Function to calculate demerit points 
 function calculateDemeritPoints(speed) {
-    // Constants
+    //assigning  Constants variable
     const speedLimit = 70;  // Speed limit in km per second
-    const demeritPointsPerIncrement = 1;  // Demerit points assigned per 5 km/s over speed limit
-    const demeritPointsThreshold = 12;  //  license suspension would happen
+    const demeritPointsPerIncrease = 1;  // Demerit points assigned per 5 km/s over speed limit
+    const demeritPointsLimit = 12;  //  license suspension is offered
   
-    // confirm speed
+    // getting the speed
     if (speed < speedLimit) {
       console.log("Ok");  
     } else {
@@ -13,7 +13,7 @@ function calculateDemeritPoints(speed) {
       const demeritPoints = Math.floor((speed - speedLimit) / 5);
   
       
-      if (demeritPoints > demeritPointsThreshold) {
+      if (demeritPoints > demeritPointsLimit) {
         console.log("License suspended");  
       } else {
         console.log("Points: " + demeritPoints);  
@@ -21,7 +21,7 @@ function calculateDemeritPoints(speed) {
     }
   }
   
-  // Example
-  const carSpeed = 80;
+  // Trial
+  const carSpeed = 54;
   calculateDemeritPoints(carSpeed);
   
